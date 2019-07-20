@@ -1,0 +1,36 @@
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <h3 class="titulo col-md-7">Seleccione el periodo que desea consultar</h3>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  2016-2019
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">2016-2019</a>
+                <a class="dropdown-item" href="#">2020-2023</a>
+            </div>
+        </div>
+    </div>
+    <hr class="mb-5">
+
+    <div *ngIf="true" class="row card-columns justify-content-center animated fadeIn">
+        <h3 class="titulo col-md-12">Estos son los ediles de nuestra Junta administradora local</h3>
+        <div class="col-md-3 card m-3" *ngFor="let edil of ediles">
+            <div class="card-content ">
+                <img [src]="edil.imagen" class="card-img-top" [alt]="edil.nombre">
+                <div class="info-img card-body text-center">
+                    <h6 class="card-text">{{edil.nombre}}</h6>
+                    <h6 class="card-text">Representante NODO {{edil.nodo}}</h6>
+                    <h6 class="card-text">Contacto: {{edil.contacto}}</h6>
+                </div>
+            </div>
+            <div class="card-body text-center pt-3 p-0">
+                <h6 class="blockquote-footer">Cortesia del Canal Zona 6</h6>
+            </div>
+        </div>
+
+        <hr class="my-lg-4 col-md-12">
+
+    </div>
+
+</div>
