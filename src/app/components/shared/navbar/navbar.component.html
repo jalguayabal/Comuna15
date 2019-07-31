@@ -1,37 +1,39 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <img src="assets/img/icono.png" width="30" height="30" alt="">
     <a class="navbar-brand" href="#">JAL comuna 15</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button id="nbar" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" routerLink="home">Inicio</a>
+                <a class="nav-link" routerLink="home" (click)="HideNavbar()">Inicio</a>
             </li>
             <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" routerLink="about">¿Que es la JAL?</a>
+                <a class="nav-link" routerLink="about" (click)="HideNavbar()">¿Que es la JAL?</a>
             </li>
             <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" routerLink="ediles">Ediles</a>
-            </li>
-            <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" routerLink="ubicacion">Donde estamos</a>
-            </li>
-            <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" routerLink="resoluciones">Resoluciones</a>
+                <a class="nav-link" routerLink="ubicacion" (click)="HideNavbar()">Donde estamos</a>
             </li>
             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Gestion
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" *ngIf="true">
+                    <a class="dropdown-item" routerLink="ediles" (click)="HideNavbar()">Periodo 2016 - 2019</a>
+                </div>
+            </li>
+            <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Más
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" *ngIf="true">
-                    <a class="dropdown-item" routerLink="login">Iniciar sesion</a>
-                    <a class="dropdown-item" routerLink="signin">Registrarse</a>
+                    <a class="dropdown-item" routerLink="login" (click)="HideNavbar()">Iniciar sesion</a>
+                    <a class="dropdown-item" routerLink="signin" (click)="HideNavbar()">Registrarse</a>
                 </div>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" *ngIf="false">
-                    <a class="dropdown-item" href="#">Perfil</a>
+                    <a class="dropdown-item" href="#" (click)="HideNavbar()">Perfil</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -39,13 +41,13 @@
                     Mi comuna
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" *ngIf="true">
-                    <a class="dropdown-item" routerLink="login">Iniciar sesion</a>
-                    <a class="dropdown-item" routerLink="signin">Registrarse</a>
+                    <a class="dropdown-item" routerLink="login" (click)="HideNavbar()">Iniciar sesion</a>
+                    <a class="dropdown-item" routerLink="signin" (click)="HideNavbar()">Registrarse</a>
                 </div>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" *ngIf="false">
-                    <a class="dropdown-item" href="#">Perfil</a>
+                    <a class="dropdown-item" href="#" (click)="HideNavbar()">Perfil</a>
                 </div>
-            </li>
+            </li> -->
         </ul>
     </div>
 </nav>
