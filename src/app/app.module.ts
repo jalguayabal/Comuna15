@@ -37,7 +37,7 @@ import { SigninComponent } from './components/signin/signin.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(ROUTES, {useHash: true})
+    RouterModule.forRoot(ROUTES, {useHash: false})
   ],
   providers: [
     EdilesService
